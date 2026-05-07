@@ -1,30 +1,56 @@
 # Hospital Management System
 
-Complete HMS with patient records, appointments, billing, pharmacy, lab, and staff management.
+> Complete HMS with patient registration, appointment scheduling (conflict detection), billing with insurance, pharmacy inventory, and lab management.
 
-## Features
-- 🏥 Patient registration & medical records
-- 📅 Appointment scheduling with conflict detection
-- 💰 Billing & invoicing with insurance support
-- 💊 Pharmacy inventory & dispensing
-- 🧪 Lab order management
-- 👨‍⚕️ Staff management
-- 📊 Analytics dashboard
+## 🚀 Overview
 
-## Tech Stack
-- Node.js, Express, Prisma, PostgreSQL, Zod, PDFKit, Nodemailer
+A comprehensive Hospital Management System covering the full patient lifecycle — from registration through appointment scheduling, treatment, billing (with insurance calculations), pharmacy dispensing, and lab result management. Built with Node.js, Express, and Zod validation.
 
-## API Endpoints
-- `/api/patients` - CRUD patients
-- `/api/appointments` - Schedule & manage
-- `/api/billing` - Generate & pay invoices
-- `/api/pharmacy` - Inventory & dispense
-- `/api/lab` - Order & results
-- `/api/staff` - Staff management
+## ✨ Features
 
-## Getting Started
+| Feature | Description |
+|---------|-------------|
+| 🏥 Patient Management | Register, search, medical history, allergies |
+| 📅 Appointments | Schedule with doctor conflict detection |
+| 💰 Billing | Auto-generate invoices with insurance/discount |
+| 💊 Pharmacy | Inventory tracking + dispense with stock deduction |
+| 🧪 Lab Orders | Order tests, submit results |
+| 👨‍⚕️ Staff Management | Doctor/nurse/admin roles |
+| 📄 PDF Reports | Invoice and lab report generation |
+| 📧 Email Notifications | Appointment reminders via Nodemailer |
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Backend | Node.js, Express, TypeScript |
+| Validation | Zod |
+| Database | PostgreSQL + Prisma |
+| PDF | PDFKit |
+| Email | Nodemailer |
+| Scheduling | node-cron |
+
+## ⚡ Quick Start
+
 ```bash
-npm install && cp .env.example .env && npm run dev
+npm install
+cp .env.example .env
+npm run dev
 ```
-## License
+
+Server at `http://localhost:5000`
+
+### API Modules
+
+| Module | Base Path | Key Endpoints |
+|--------|-----------|--------------|
+| Patients | `/api/patients` | CRUD + search |
+| Appointments | `/api/appointments` | Schedule, status update |
+| Billing | `/api/billing` | Generate invoice, mark paid |
+| Pharmacy | `/api/pharmacy` | Inventory, dispense |
+| Lab | `/api/lab` | Order tests, submit results |
+| Staff | `/api/staff` | Register staff |
+
+## 📄 License
+
 MIT
